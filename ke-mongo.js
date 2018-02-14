@@ -9,6 +9,7 @@ module.exports = class Mongo extends Utility {
     me.Db = {}; me.Table = '';
     //ok
     if(!me.CFG){me.info();}
+    me.CFG.monogo=me.CFG.monogo||{server: 'localhost', port: '27017'};
     op.server=op.server||me.CFG.mongo.server; op.port=op.port||me.CFG.mongo.port;
     op.db=op.db||me.CFG.mongo.db;
     let wid=me.ready();
